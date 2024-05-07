@@ -1,0 +1,14 @@
+<div>
+  <div class="flex justify-between px-2">
+    <h1 class="text-md text-white font-bold">{{ title }}</h1>
+    <button mat-raised-button>Add New Employee</button>
+  </div>
+  <div class="grid grid-cols-2 p-5 gap-2">
+    @if(this.employees) { @for (employee of this.employees; track
+    employee.id) {
+    <app-employee-card [employee]="employee"></app-employee-card>
+    } }@else {
+    <div>No user data found</div>
+    }
+  </div>
+</div>

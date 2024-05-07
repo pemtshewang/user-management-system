@@ -1,0 +1,39 @@
+<ng-container *ngIf="this.userDetail">
+  <div class="flex-col justify-center">
+    <div class="flex justify-end mx-6">
+      <button mat-raised-button>
+        <a [routerLink]="['/']"> Employee List </a>
+      </button>
+    </div>
+    <mat-card class="max-w-sm mx-auto">
+      <mat-card-content>
+        <div class="flex space-x-5">
+          <div>
+            <img class="w-12 h-12" [src]="this.userDetail.image" alt="avatar" />
+          </div>
+          <div>
+            <p>
+              Name:
+              <b>
+                {{ this.userDetail.first_name }}
+                {{ this.userDetail.last_name }}
+              </b>
+            </p>
+            <p>
+              Organization Email:
+              <b>
+                {{ this.userDetail.email }}
+              </b>
+            </p>
+            <p>
+              Gender:<b>{{ this.userDetail.gender }}</b>
+            </p>
+            <p>
+              SSN: <b>{{ this.userDetail.ssn }}</b>
+            </p>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ng-container>
